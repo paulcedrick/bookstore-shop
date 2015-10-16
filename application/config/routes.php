@@ -51,8 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['login'] = 'users/login';
 $route['signup'] = 'users/signup';
-$route['book/update/(:num)'] = 'books/update/$1';
-$route['book/delete/(:num)'] = 'books/delete/$1';
+$route['book/(:any)/(:num)'] = 'books/$1/$2';
 $route['book/(:any)'] = 'books/$1';
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
