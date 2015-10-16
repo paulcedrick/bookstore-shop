@@ -51,6 +51,17 @@ class Books extends CI_Controller {
             'is_successful' => $flag
         ));
     }
+
+    public function approveBook($id = NULL)
+    {
+        $data['is_available'] = '1';
+
+        $flag = $this->books_model->updateBook($id, $data);
+
+        echo json_encode(array(
+            'is_successful' => $flag
+        ));
+    }
 }
 
 /* End of file Books.php */

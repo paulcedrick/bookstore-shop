@@ -10,7 +10,7 @@ class Books_model extends CI_Model {
 
     public function getAllBooks()
     {
-        $query = $this->db->get('books');
+        $query = $this->db->get_where('books', array('is_available' => '1', 'is_deleted' => '0'));
 
         return $query->result_array();
     }
